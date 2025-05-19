@@ -29,23 +29,26 @@
       background: #ffffff;
       border-radius: 4mm;
       box-shadow: 0 2mm 5mm rgba(0, 0, 0, 0.1);
-      padding: 4mm;
+      padding: 3mm;
       display: flex;
       flex-direction: column;
+      gap: 1mm;
       justify-content: space-between;
     }
+
 
     .header {
       background: linear-gradient(135deg, #459bf1, #b6d6f0);
       color: white;
-      padding: 4mm 4mm;
-      border-radius: 3mm;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 4.5mm;
-      font-weight: 600;
-      margin: 0.5mm;
+      min-height: 35%;
+      padding: 2mm 2mm 2mm 2mm;
+      border-radius: 2.5mm;
+      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: 15% 80%;
+      grid-template-rows: auto;
+      gap: 1mm;
+
     }
 
     .badge {
@@ -55,33 +58,35 @@
       /* main badge, eller kortet som tar störst plats */
       border-radius: 2mm;
       font-size: 3mm;
-      font-weight: bold;
-      margin-right: 3mm;
       box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
     }
 
-    .brand-model {
-      display: inline-block;
+    .pris {
+      font-size: 4mm;
+      text-align: right;
     }
 
-    .price {
-      font-size: 5mm;
-      font-weight: bold;
+    .namn {
+      font-size: 4mm;
     }
 
 
     .name-block {
       min-height: 16%;
-      padding: 4mm;
-      margin: 1mm;
       background: #212121;
-      border-radius: 4mm;
+      border-radius: 3mm;
       color: #ffffff;
-      padding: 1mm;
-      margin: 0.5mm;
-      align-content: center;
-      overflow: hidden;
-      white-space: nowrap;
+      display: flex;
+      overflow: show;
+      white-space: wrap;
+      align-items: center;
+    }
+
+    .block-text {
+      padding-left: 3mm;
+      font-size: 2.5mm;
+      color: #ffffff;
+     text-align: left;
       text-overflow: ellipsis;
     }
 
@@ -90,50 +95,37 @@
       background: slategrey;
       color: #424242;
     } */
-  
+
     .footer {
       display: flex;
       align-items: center;
-      gap: 4mm;
-      margin-top: 3mm;
+      gap: 2mm;
     }
 
     .logo-container {
-      width: 20%;
-      height: 40%;
-      margin: 2mm;
+      width: 64px;
+      height: 64px;
+      align-content: center;
       border-radius: 3mm;
-      overflow: hidden;
+      overflow: show;
       background: #ffffff;
-      box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 4px solid #ccc;
+      padding: 1mm;
     }
 
     .barcode-container {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: left;
       justify-content: center;
     }
 
     .barcode {
       width: 100%;
-      height: 25%;
-      margin: 3mm;
-      background: #eeeeee;
+      height: 50%;
       display: flex;
       font-size: 3mm;
       color: #9e9e9e;
-    }
-
-    .code {
-      font-size: 3mm;
-      color: #616161;
-      margin: 1mm;
     }
   </style>
 </head>
@@ -141,26 +133,21 @@
 <body>
 
   <div class="product-card">
-    <div class="header">
-      <div>
-        <span class="badge">Nyhet!</span>
-        <span class="brand-model">[BRAND] [MODEL]</span>
-      </div>
-      <div class="price">[PRICE_INC_VAT]</div>
-    </div>
+    <section class="header">
+      <div class="badge">Nyhet!</div>
+      <div class="pris">[PRICE_INC_VAT]</div>
+      <div class="namn">[NAME]</div>
+    </section>
     <div class="name-block">
-      <span class="block-text">[NAME]</span>
+      <span class="block-text">[MODEL]</span>
     </div>
     <div class="name-block">
       <span class="block-text">[DESCRIPTION]</span>
     </div>
     <div class="footer">
-      <div class="logo-container">
-        [IMG_LOGO]
-      </div>
+      <div class="logo-container">[IMG_LOGO]</div>
       <div class="barcode-container">
         <div class="barcode">[BAR_CODE]</div>
-        <div class="code">[CODE]</div>
       </div>
     </div>
   </div>
