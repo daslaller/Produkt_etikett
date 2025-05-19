@@ -27,7 +27,7 @@
       height: 57mm;
       /* höjden på kortet */
       background: #ffffff;
-      border-radius: 4mm;
+      border-radius: 3mm;
       box-shadow: 0 2mm 5mm rgba(0, 0, 0, 0.1);
       padding: 3mm;
       display: flex;
