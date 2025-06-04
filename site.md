@@ -71,8 +71,7 @@
         color: #ffffff;
         display: flex;
         overflow: show;
-        white-space: wrap;
-        align-items: center;
+        align-items: left;
       }
 
       .block-text {
