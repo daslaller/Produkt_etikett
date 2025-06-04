@@ -1,148 +1,182 @@
-<invalidtag charset="UTF-8">
-  <invalidtag content="width=device-width, initial-scale=1.0" name="viewport">
-    <title></title>
-    <style type="text/css">
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Etna', 'Segoe UI', Arial, sans-serif;
-      }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produkt</title>
+<style type="text/css">
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Etna', 'Segoe UI', Arial, sans-serif;
+  }
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: #f0f4f8;
-      }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f4f8;
+  }
 
-      .product-card {
-        width: 105mm;
-        /* bredden på kortet */
-        height: 57mm;
-        /* höjden på kortet */
-        min-height: fit-content;
-        background: #ffffff;
-        border-radius: 3mm;
-        box-shadow: 0 2mm 5mm rgba(0, 0, 0, 0.1);
-        padding: 3mm;
-        display: flex;
-        flex-direction: column;
-        gap: 1mm;
-        justify-content: space-between;
+  .product-card {
+    width: 105mm;
+    /* bredden på kortet */
+    height: 57mm;
+    /* höjden på kortet */
+    min-height: fit-content;
+    background: #ffffff;
+    border-radius: 3mm;
+    box-shadow: 0 2mm 5mm rgba(0, 0, 0, 0.1);
+    padding: 3mm;
+    display: flex;
+    flex-direction: column;
+    gap: 1mm;
+    justify-content: space-between;
 
-      }
+  }
 
-      .header {
-        background: linear-gradient(135deg, #4c9ce6, #174f93);
-        color: white;
-        min-height: 35%;
-        padding: 2mm 2mm 2mm 2mm;
-        border-radius: 2.5mm;
-        justify-content: space-between;
-        display: grid;
-        grid-template-columns: repeat(2, min-content);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        gap: 1mm;
-      }
+  .header {
+    background: linear-gradient(135deg, #4c9ce6, #174f93);
+    display: grid;
+    color: #ffffff !important;
+    min-height: fit-content;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+    padding-right: 2mm;
+    padding-left: 2mm;
+    border-radius: 2.5mm;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.75mm;
+  }
 
-      .badge {
-        text-wrap: nowrap;
-        background: #ffffff;
-        color: #1976d2;
-        padding: 1mm 2.5mm;
-        /* main badge, eller kortet som tar störst plats */
-        border-radius: 2mm;
-        font-size: 3mm;
-        box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
-        grid-area: 1 / 1 / 2 / 2; 
-      }
+  .badge {
+    text-wrap: nowrap;
+    background: #ffffff;
+    color: #1976d2;
+    padding: 1mm 2.5mm;
+    /* main badge, eller kortet som tar störst plats */
+    border-radius: 2mm;
+    font-size: 3mm;
+    box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
+    grid-area: 1 / 1 / 2 / 2;
+  }
 
-      .pris {
-        font-size: 4mm;
-        text-align: right;
-        grid-area: 1 / 2 / 2 / 3; 
-      }
+  .pris {
+    font-size: 4mm;
+    text-align: right;
+    grid-area: 1 / 2 / 2 / 3;
+  }
 
-      .namn {
-        font-size: 4mm;
-        grid-area: 2 / 1 / 3 / 3;
-        text-align: left;
-      }
+  .namn {
+    font-size: 4mm;
+    grid-area: 2 / 1 / 3 / 3;
+    text-align: left;
+  }
 
-      .name-block {
-        min-height: 16%;
-        background: #212121;
-        border-radius: 3mm;
-        color: #ffffff;
-        overflow: show;
-        text-align: left;
-        font-size: 2.5mm;
-        text-wrap: nowrap;
-        overflow: hidden;
-        justify-content: space-around;
-        align-content: center;
-        padding-left: 3mm;
-      }
+  .name-block {
+    min-height: 16%;
+    background: #212121;
+    border-radius: 3mm;
+    color: #ffffff;
+    overflow: show;
+    text-align: left;
+    font-size: 2.5mm;
+    text-wrap: nowrap;
+    overflow: hidden;
+    justify-content: space-around;
+    align-content: center;
+    padding-left: 3mm;
+  }
 
-      /*.description-block { min-height: 20%mm; background: slategrey; color: #424242; } */
-      .footer {
-        display: flex;
-        align-items: center;
-        gap: 2mm;
-      }
+  /*.description-block { min-height: 20%mm; background: slategrey; color: #424242; } */
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+  }
 
-      .logo-container {
-        width: 64px;
-        height: 64px;
-        align-content: center;
-        border-radius: 3mm;
-        overflow: show;
-        background: #ffffff;
-        margin-bottom: 1mm;
-        margin-left: 1mm;
+  .logo-container {
+    width: 64px;
+    height: 64px;
+    align-content: center;
+    border-radius: 3mm;
+    overflow: show;
+    background: #ffffff00;
+    margin-bottom: 1mm;
+    margin-left: 1mm;
+    object-fit: contain;
 
-        
-      }
+  }
 
-      .barcode-container {
-        min-width: max-content;
-        align-content: center;
-        justify-content: center space-around;
-        overflow: visible;
-      }
+  .barcode-container {
+    display: flex;
+    /* Om [BAR_CODE] är text som ska stylas, eller om det är en bild som ska centreras */
+    align-items: center;
+    justify-content: space-evenly;
+    /* Om innehållet är mindre än containern */
+    font-size: 3mm;
+    /* Om [BAR_CODE] är text */
+    color: black;
+    /* Om [BAR_CODE] är text */
+    min-height: fit-content;
+    /* Justera maxhöjd för streckkoden */
+    width: max-content;
+    object-fit: contain;
+    padding-bottom: 2mm;
+  }
 
-      .barcode {
-        width: 100%;
-        height: 50%;
-        display: flex;
-        font-size: 3mm;
-        color: black;
-      }
-    </style>
-    <div class="product-card">
-      <div class="header">
-        <div class="badge">Vi Rekommenderar!</div>
+  /* Specifika regler för utskrift */
+@media print {
 
-        <div class="pris">[PRICE_INC_VAT]</div>
+  body {
+        -webkit-print-color-adjust: exact; /* Försöker tvinga webbläsare att skriva ut färger/bakgrunder */
+        print-color-adjust: exact;
+    }
+    .header {
+        background: linear-gradient(135deg, #4c9ce6, #174f93) !important;
+        color: #ffffff !important;
+    }
+    .badge {
+        background: #ffffff !important;
+        color: #1976d2 !important;
+     /*    box-shadow: none !important; Skuggor är sällan bra vid utskrift */
+    }
 
-        <div class="namn">[NAME]</div>
-      </div>
+    /* Återställ eventuell global färgändring för just detta block */
+    .name-block {
 
-      <!-- <div class="name-block">[MODEL]</div> -->
+        background: #212121 !important; /* Behåll bakgrund om önskvärt */
+        color: #ffffff !important;      /* Behåll vit textfärg */
+/* Detta är en egenskap som kan behövas för att vissa webbläsare ska respektera bakgrundsfärger vid utskrift */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .logo-container img {
+        /* Inga specifika ändringar behövs oftast om de är korrekta för skärm */
+    }
 
-      <div class="name-block">[DESCRIPTION]</div>
+    .barcode img, .barcode span, .barcode div {
+        color: black !important; /* Streckkodstext ska alltid vara svart för bästa läsbarhet */
+    }
+}
+</style>
+<div class="product-card">
+  <div class="header">
+    <div class="badge">Vi Rekommenderar!</div>
 
-      <div class="footer">
-        <div class="logo-container">[IMG_LOGO]</div>
+    <div class="pris">[PRICE_INC_VAT]</div>
 
-        <div class="barcode-container">
-          <div class="barcode">[BAR_CODE]</div>
-        </div>
-      </div>
-    </div>
-  </invalidtag>
-</invalidtag>
+    <div class="namn">[NAME]</div>
+  </div>
+
+  <!-- <div class="name-block">[MODEL]</div> -->
+
+  <div class="name-block">[DESCRIPTION]</div>
+
+  <div class="footer">
+    <div class="logo-container">[IMG_LOGO]</div>
+
+    <div class="barcode-container">[BAR_CODE]</div>
+  </div>
+</div>
