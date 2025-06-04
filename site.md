@@ -40,12 +40,15 @@
         border-radius: 2.5mm;
         justify-content: space-between;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(0, 1fr);
+        grid-template-columns: repeat(2, min-content);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         gap: 1mm;
       }
 
       .badge {
+        text-wrap: nowrap;
         background: #ffffff;
         color: #1976d2;
         padding: 1mm 2.5mm;
@@ -53,15 +56,18 @@
         border-radius: 2mm;
         font-size: 3mm;
         box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
+        grid-area: 1 / 1 / 2 / 2; 
       }
 
       .pris {
         font-size: 4mm;
         text-align: right;
+        grid-area: 1 / 2 / 2 / 3; 
       }
 
       .namn {
         font-size: 4mm;
+        grid-area: 2 / 1 / 3 / 3;
       }
 
       .name-block {
@@ -69,7 +75,6 @@
         background: #212121;
         border-radius: 3mm;
         color: #ffffff;
-        display: flex;
         overflow: show;
         align-items: left;
       }
@@ -116,13 +121,13 @@
       }
     </style>
     <div class="product-card">
-      <section class="header">
+      <div class="header">
         <div class="badge">Vi Rekommenderar!</div>
 
         <div class="pris">[PRICE_INC_VAT]</div>
 
         <div class="namn">[NAME]</div>
-      </section>
+      </div>
 
       <div class="name-block"><span class="block-text">[MODEL]</span></div>
 
