@@ -68,6 +68,7 @@
       .namn {
         font-size: 4mm;
         grid-area: 2 / 1 / 3 / 3;
+        text-align: left;
       }
 
       .name-block {
