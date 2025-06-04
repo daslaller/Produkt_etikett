@@ -1,11 +1,7 @@
-< !DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>105x57 Product Card</title>
-    <style>
+<invalidtag charset="UTF-8">
+  <invalidtag content="width=device-width, initial-scale=1.0" name="viewport">
+    <title></title>
+    <style type="text/css">
       * {
         box-sizing: border-box;
         margin: 0;
@@ -36,9 +32,8 @@
         justify-content: space-between;
       }
 
-
       .header {
-        background: linear-gradient(135deg, #459bf1, #b6d6f0);
+        background: linear-gradient(135deg, #4c9ce6, #174f93);
         color: white;
         min-height: 35%;
         padding: 2mm 2mm 2mm 2mm;
@@ -48,14 +43,13 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(0, 1fr);
         gap: 1mm;
-
       }
 
       .badge {
         background: #ffffff;
         color: #1976d2;
         padding: 1mm 2.5mm;
-        /* badgen som som håller "nyhet!" eller liknande */
+        /* main badge, eller kortet som tar störst plats */
         border-radius: 2mm;
         font-size: 3mm;
         box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.15);
@@ -69,7 +63,6 @@
       .namn {
         font-size: 4mm;
       }
-
 
       .name-block {
         min-height: 16%;
@@ -90,12 +83,7 @@
         text-overflow: ellipsis;
       }
 
-      /*.description-block {
-      min-height: 20%mm;
-      background: slategrey;
-      color: #424242;
-    } */
-
+      /*.description-block { min-height: 20%mm; background: slategrey; color: #424242; } */
       .footer {
         display: flex;
         align-items: center;
@@ -128,24 +116,26 @@
         color: #9e9e9e;
       }
     </style>
-  </head>
-
-  <body>
     <div class="product-card">
       <section class="header">
-        <div class="badge">Nyhet !</div>
+        <div class="badge">Vi Rekommenderar!</div>
+
         <div class="pris">[PRICE_INC_VAT]</div>
+
         <div class="namn">[NAME]</div>
       </section>
+
       <div class="name-block"><span class="block-text">[MODEL]</span></div>
+
       <div class="name-block"><span class="block-text">[DESCRIPTION]</span></div>
+
       <div class="footer">
         <div class="logo-container">[IMG_LOGO]</div>
+
         <div class="barcode-container">
           <div class="barcode">[BAR_CODE]</div>
         </div>
       </div>
     </div>
-  </body>
-
-  </html>
+  </invalidtag>
+</invalidtag>
